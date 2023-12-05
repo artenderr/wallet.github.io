@@ -247,6 +247,7 @@ main {
   display: flex;
   align-items: center;
   font-size: calc(1vw + 4vh);
+  font-weight: 500;
 }
 
 .transaction-received {
