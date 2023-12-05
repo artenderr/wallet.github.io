@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Иконка лого -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+  <!-- Прокладка для верхнего колонтитула -->
+  <div class="under-header"></div>
+  <!-- Верхний колонтитул -->
+  <header>
+    <!-- Логотип -->
+    <div class="logo">
+      <span class="material-symbols-outlined logo-icon">wallet</span>
+      <p>Wallet</p>
+    </div>
+    <!-- Информация о пользователе -->
+    <div class="user-info">
+      <p>artender</p>
+      <img src="images/pfp.jpeg" alt="profile picture">
+    </div>
+  </header>
+
+  <!-- Основное содержимое -->
+  <main>
+    <!-- Счетчик баланса -->
+    <div class="balance">
+      <p>total balance</p>
+      <p>
+        <span class="material-symbols-outlined euro-icon">euro_symbol</span>9,298.54
+      </p>
+      <div class="controls">
+        <button class="withdraw">
+          <span class="material-symbols-outlined arrow-up">arrow_upward</span>Withdraw
+        </button>
+        <button class="deposit">
+          <span class="material-symbols-outlined arrow-down">arrow_downward</span>Deposit
+        </button>
+      </div>
+    </div>
+
+    <!-- История операций -->
+    <div class="history">
+      <p>transaction history</p>
+
+      <!-- Блок транзакции -->
+      <div class="transaction">
+        <div class="transaction-data">
+          <!-- Информационное изображение транзакции -->
+          <div class="transaction-img">
+            <img src="images/veggie.png">
+          </div>
+          <!-- Текстовая информация транзакции -->
+          <div class="transaction-text">
+            <!-- Участник транзакции -->
+            <p>veggies</p>
+            <!-- Дополнительная информация -->
+            <p>goods and services</p>
+          </div>
+        </div>
+        <!-- Сумма транзакции -->
+        <p class="transaction-spent">
+          <span class="material-symbols-outlined euro-transaction">euro_symbol</span>7.39
+        </p>
+      </div>
+
+      <!-- Блок транзакции -->
+      <div class="transaction">
+        <div class="transaction-data">
+          <!-- Информационное изображение транзакции -->
+          <div class="transaction-img">
+            <img src="images/salary.png">
+          </div>
+          <!-- Текстовая информация транзакции -->
+          <div class="transaction-text">
+            <!-- Участник транзакции -->
+            <p>job payment</p>
+            <!-- Дополнительная информация -->
+            <p>incoming funds</p>
+          </div>
+        </div>
+        <!-- Сумма транзакции -->
+        <p class="transaction-received">
+          <span class="material-symbols-outlined euro-transaction">euro_symbol</span>50.00
+        </p>
+      </div>
+
+      <!-- Блок транзакции -->
+      <div class="transaction">
+        <div class="transaction-data">
+          <!-- Информационное изображение транзакции -->
+          <div class="transaction-img">
+            <img src="images/fries.png">
+          </div>
+          <!-- Текстовая информация транзакции -->
+          <div class="transaction-text">
+            <!-- Участник транзакции -->
+            <p>fast food</p>
+            <!-- Дополнительная информация -->
+            <p>goods and services</p>
+          </div>
+        </div>
+        <!-- Сумма транзакции -->
+        <p class="transaction-spent">
+          <span class="material-symbols-outlined euro-transaction">euro_symbol</span>3.99
+        </p>
+      </div>
+
+      <!-- Блок транзакции -->
+      <div class="transaction">
+        <div class="transaction-data">
+          <!-- Информационное изображение транзакции -->
+          <div class="transaction-img">
+            <img src="images/coffee.png">
+          </div>
+          <!-- Текстовая информация транзакции -->
+          <div class="transaction-text">
+            <!-- Участник транзакции -->
+            <p>cup of coffee</p>
+            <!-- Дополнительная информация -->
+            <p>goods and services</p>
+          </div>
+        </div>
+        <!-- Сумма транзакции -->
+        <p class="transaction-spent">
+          <span class="material-symbols-outlined euro-transaction">euro_symbol</span>0.99
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Нижний колонтитул -->
+  <footer>
+    &#169; 2023 Wallet, All Rights Reserved.
+  </footer>
+</body>
+</html>

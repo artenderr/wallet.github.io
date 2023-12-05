@@ -1,0 +1,334 @@
+@font-face {
+  font-family: 'DMSans';
+  src: url('fonts/DMSans.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #F2F2F2;
+  --container-color: white;
+  --border-color: #D8DBDD;
+  --item-color: black;
+  --light-item-color: gray;
+  --highlight-color: #E3F530;
+
+  --big-shadow-fade: calc(2vw + 8vh);
+  --small-shadow-fade: calc(0.5vw + 2vh);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--item-color);
+  font-family: 'DMSans';
+}
+
+.under-header {
+  z-index: 1;
+  position: fixed;
+  top: -10%;
+  left: -5%;
+  width: calc(100% + 10%);
+  height: calc(calc(2vw + 8vh) + 10%);
+
+  background-color: var(--background-color);
+
+  filter: blur(calc(0.25vw + 1vh));
+}
+
+header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(2vw + 8vh);
+
+  padding: calc(0.5vw + 2vh);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  font-size: calc(1vw + 4vh);
+  font-weight: 500;
+}
+
+.material-symbols-outlined.logo-icon {
+  font-size: calc(1vw + 4vh) !important;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: calc(0.25vw + 1vh);
+
+  font-size: calc(0.5vw + 2vh);
+}
+
+.user-info > img {
+  width: calc(1vw + 4vh);
+  height: calc(1vw + 4vh);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+main {
+  width: auto;
+
+  margin-top: calc(2vw + 8vh);
+  padding: calc(0.5vw + 2vh);
+
+  padding-bottom: 0;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: var(--container-color);
+
+  border: calc(0.03125vw + 0.125vh) solid var(--border-color);
+  border-radius: calc(0.5vw + 2vh);
+
+  box-shadow: 0 calc(1vw + 4vh) calc(2vw + 8vh) calc(var(--big-shadow-fade) * -1) black;
+
+  padding: calc(0.5vw + 2vh);
+  margin-bottom: calc(1vw + 4vh);
+}
+
+.balance > p:nth-of-type(1) {
+  color: var(--light-item-color);
+  font-size: calc(0.75vw + 3vh);
+}
+
+.balance > p:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+
+  font-size: calc(2vw + 8vh);
+  font-weight: 500;
+}
+
+.material-symbols-outlined.euro-icon {
+  font-size: calc(2vw + 8vh) !important;
+}
+
+.controls {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: calc(0.5vw + 2vh);
+}
+
+.controls > button {
+  display: flex;
+  align-items: center;
+  gap: calc(0.125vw + 0.5vh);
+
+  background-color: var(--container-color);
+  color: var(--item-color);
+
+  height: calc(1.5vw + 6vh);
+
+  font-family: inherit;
+  font-size: calc(0.5vw + 2vh);
+
+  border: calc(0.03125vw + 0.125vh) solid var(--border-color);
+  border-radius: calc(1vw + 4vh);
+
+  box-shadow: 0 calc(0.25vw + 1vh) calc(0.5vw + 2vh) calc(var(--small-shadow-fade) * -1) black;
+
+  padding: calc(0.25vw + 1vh);
+  padding-left: calc(0.75vw + 3vh);
+  padding-right: calc(0.75vw + 3vh);
+}
+
+.material-symbols-outlined.arrow-up,
+.material-symbols-outlined.arrow-down {
+  font-size: calc(0.75vw + 3vh);
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: var(--container-color);
+
+  border: calc(0.03125vw + 0.125vh) solid var(--border-color);
+  border-radius: calc(0.5vw + 2vh);
+
+  box-shadow: 0 calc(1vw + 4vh) calc(2vw + 8vh) calc(var(--big-shadow-fade) * -0.875) black;
+
+  padding: calc(0.5vw + 2vh);
+  /* margin-bottom: calc(1vw + 4vh); */
+}
+
+.history > p:nth-of-type(1) {
+  color: var(--light-item-color);
+  font-size: calc(0.75vw + 3vh);
+
+  margin-bottom: calc(0.25vw + 1vh);
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  gap: calc(0.5vw + 2vh);
+  justify-content: space-between;
+
+  width: 100%;
+  /* background-color: pink; */
+
+  margin-bottom: calc(0.5vw + 2vh);
+}
+
+.transaction:last-of-type {
+  margin-bottom: 0;
+}
+
+.transaction-data {
+  display: flex;
+  align-items: center;
+  gap: calc(0.5vw + 2vh);
+}
+
+.transaction-img {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background-color);
+  
+  width: calc(2vw + 8vh);
+  height: calc(2vw + 8vh);
+
+  border: calc(0.03125vw + 0.125vh) solid var(--border-color);
+  border-radius: 50%;
+}
+
+.transaction-img > img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.transaction-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.transaction-text > p:first-of-type {
+  font-size: calc(0.75vw + 3vh);
+}
+
+.transaction-text > p:nth-of-type(2) {
+  font-size: calc(0.5vw + 2vh);
+  color: var(--light-item-color);
+}
+
+.transaction-spent,
+.transaction-received {
+  display: flex;
+  align-items: center;
+  font-size: calc(1vw + 4vh);
+}
+
+.transaction-received {
+  color: green;
+}
+
+.material-symbols-outlined.euro-transaction {
+  font-size: calc(0.9375vw + 3.75vh) !important;
+}
+
+footer {
+  /* background-color: red; */
+
+  width: 100%;
+  text-align: center;
+
+  color: var(--light-item-color);
+
+  padding: calc(1vw + 4vh);
+}
+
+@media (max-aspect-ratio: 1/1.6) {
+  .balance > p:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+  
+    font-size: calc(1.5vw + 6vh);
+    font-weight: 500;
+  }
+
+  .material-symbols-outlined.euro-icon {
+    font-size: calc(1.5vw + 6vh) !important;
+  }
+
+  .controls {
+    gap: calc(0.25vw + 1vh);
+  }
+
+  .controls > button {
+    padding: calc(0.125vw + 0.5vh);
+    padding-left: calc(0.325vw + 1.5vh);
+    padding-right: calc(0.325vw + 1.5vh);
+  }
+
+  .transaction-img {
+    width: calc(1.5vw + 6vh);
+    height: calc(1.5vw + 6vh);
+  }
+
+  .transaction-text > p:first-of-type {
+    font-size: calc(0.6vw + 2.5vh);
+  }
+  
+  .transaction-text > p:nth-of-type(2) {
+    font-size: calc(0.375vw + 1.5vh);
+  }
+
+  .material-symbols-outlined.euro-transaction {
+    font-size: calc(0.8125vw + 3.25vh) !important;
+  }
+
+  .transaction-spent,
+  .transaction-received {
+    font-size: calc(0.75vw + 3vh);
+  }
+}
+
+@media (max-aspect-ratio: 1/1.75) {
+  .transaction-text > p:first-of-type {
+    font-size: calc(0.5375vw + 2.150vh);
+  }
+  
+  .transaction-text > p:nth-of-type(2) {
+    font-size: calc(0.3125vw + 1.25vh);
+  }
+
+  .material-symbols-outlined.euro-transaction {
+    font-size: calc(0.71875vw + 2.875vh) !important;
+  }
+
+  .transaction-spent,
+  .transaction-received {
+    font-size: calc(0.75vw + 3vh);
+  }
+}
